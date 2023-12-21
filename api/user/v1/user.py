@@ -49,5 +49,6 @@ async def create_user(request: CreateUserRequestSchema):
     responses={"404": {"model": ExceptionResponseSchema}},
 )
 async def login(request: LoginRequest):
-    token = await UserService().login(email=request.email, password=request.password)
+    token = await UserService().login(
+        email=request.email, password=request.password)
     return {"token": token.token, "refresh_token": token.refresh_token}
