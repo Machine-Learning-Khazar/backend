@@ -312,8 +312,3 @@ def main():
     print(
         f"Your test result is {'positive' if prediction == 1 else 'negative'}.")
     print(f"The certanity of prediction: {proba*100:.2f}%")
-
-
-# if __name__ == "__main__":
-#     main()
-# %%
